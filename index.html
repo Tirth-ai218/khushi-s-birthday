@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Khushi 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="Khushi Ki Baat (1).mp3" type="audio/mpeg">
+  </audio>
+  <!-- In index.html -->
+<audio id="bg-music" loop>
+  <source src="Khushi Ki Baat (1).mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()" class="surprise-btn">🎵 Play Music</button>
+
+<script>
+  function playMusic() {
+    const audio = document.getElementById("bg-music");
+    audio.play().catch(e => {
+      alert("Please interact with the page to play the music.");
+    });
+  }
+</script>
+
+
+  <div class="container">
+    <h1>❤️ Happy Birthday, Khushi! ❤️</h1>
+    <p class="message">You’re the reason every moment feels like magic ✨<br>I’m so grateful to celebrate you today and always 💕</p>
+    
+    <button onclick="revealSurprise()" class="surprise-btn">Click for Surprise 🎁</button>
+    <div id="surprise" class="hidden">
+      <p>💌 I love you more every day, forever and always 💌</p>
+    </div>
+
+    <h2 class="gallery-title">Our Memories 📸</h2>
+    <div class="gallery">
+      <img src="IMG_20250729_222115_762.jpg" onclick="openLightbox(this)">
+      <img src="IMG_20250729_222351_832.jpg" onclick="openLightbox(this)">
+      <img src="IMG_20250729_222353_602.jpg" onclick="openLightbox(this)">
+      <!-- Add more -->
+    </div>
+  </div>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" />
+  </div>
+
+  <canvas id="hearts-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

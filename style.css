@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(120deg, #ffe0ec, #ffd3d3);
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 3rem;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #d63384;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.surprise-btn {
+  padding: 12px 24px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.surprise-btn:hover {
+  background-color: #e055a0;
+}
+
+#surprise {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #c2185b;
+  transition: all 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+.gallery-title {
+  margin-top: 3rem;
+  color: #d63384;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 15px;
+}
+
+/* Floating hearts canvas */
+#hearts-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
